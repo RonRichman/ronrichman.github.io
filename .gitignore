@@ -1,0 +1,17 @@
+# Plaintext courses. Keep them locally and re-encrypt; never commit them.
+/learn-src/
+
+# Encrypt tooling
+node_modules/
+.env
+.env.*
+.staticrypt.json
+
+# Local preview
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+/decrypted/

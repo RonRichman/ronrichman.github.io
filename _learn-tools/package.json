@@ -1,0 +1,16 @@
+{
+  "name": "learn-hub-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build and encrypt the /learn hub. Not published by GitHub Pages.",
+  "scripts": {
+    "encrypt": "node encrypt-learn.mjs"
+  },
+  "dependencies": {
+    "marked": "^15.0.12",
+    "staticrypt": "3.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
