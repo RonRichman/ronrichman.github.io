@@ -1,0 +1,18 @@
+/* RL-environments course add-ons. Load after lesson.css. */
+.anatomy { margin: 1.25rem 0; padding: .9rem 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--font-sans); font-size: .85rem; }
+.anatomy-tree { font-family: var(--font-mono); line-height: 1.9; margin: 0 0 .6rem; }
+.anatomy-tree button { font: inherit; background: none; border: 0; border-bottom: 1px dotted var(--accent); color: var(--accent); cursor: pointer; padding: 0 .1rem; }
+.anatomy-tree button.active { background: var(--accent-soft); }
+.anatomy-tree .indent { display: inline-block; width: 1.4rem; }
+.anatomy-detail { min-height: 4.5rem; border-top: 1px solid var(--rule); padding-top: .6rem; color: var(--ink); font-family: var(--font-serif); font-size: .95rem; }
+.anatomy-detail .role { font-family: var(--font-sans); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .2rem; }
+pre.code { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: .8rem 1rem; overflow-x: auto; font-family: var(--font-mono); font-size: .78rem; line-height: 1.5; }
+table.ref { width: 100%; border-collapse: collapse; font-size: .92rem; margin: 1rem 0; }
+table.ref th, table.ref td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); padding: .45rem .5rem; }
+table.ref th { font-family: var(--font-sans); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+dl.gloss dt { font-weight: 600; margin-top: 1rem; }
+dl.gloss dd { margin: .2rem 0 0 0; }
+dl.gloss .avoid { font-style: italic; color: var(--muted); font-size: .9rem; }
+.bridge { border-left: 3px solid #8a6d1c; background: #faf5e6; padding: .8rem 1rem; margin: 1.25rem 0; }
+.bridge strong { font-family: var(--font-sans); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: #8a6d1c; display: block; margin-bottom: .3rem; }
+@media print { .anatomy-tree button { border: 0; color: var(--ink); } }

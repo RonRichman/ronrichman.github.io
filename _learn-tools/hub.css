@@ -1,0 +1,191 @@
+/* Learning hub — same Tufte-inspired page as the lessons. */
+:root {
+  --bg: #fffff8;
+  --ink: #111;
+  --muted: #5a5a5a;
+  --accent: #1a5f7a;
+  --accent-soft: #e8f2f6;
+  --rule: #ddd;
+  --max: 42rem;
+  --font-serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lesson {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+header.lesson-header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+.lesson-kicker a { color: var(--muted); }
+
+h1 {
+  font-weight: 400;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.lesson-win {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+p, li { margin: 0.7rem 0; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover { background: var(--accent-soft); }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.nav-links {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  margin: 0 0 1.25rem;
+}
+
+.nav-links.back { margin-top: 2.5rem; }
+
+ul.courses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.courses > li {
+  border-top: 1px solid var(--rule);
+  padding: 1.15rem 0 1.25rem;
+}
+
+ul.courses > li:last-child { border-bottom: 1px solid var(--rule); }
+
+.course-title {
+  display: inline-block;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0.2rem 0;
+  text-decoration: none;
+}
+
+.course-meta {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+ol.toc {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+ol.toc li {
+  margin: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+ol.toc a {
+  display: block;
+  padding: 0.7rem 0.2rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+ol.toc a:hover,
+ol.toc a:focus {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  background: #f3f3ee;
+  padding: 0.05em 0.3em;
+}
+
+ul, ol { padding-left: 1.3rem; }
+
+.prose li { margin: 0.45rem 0; }
+
+a { overflow-wrap: anywhere; }
+
+::selection { background: #d5e8ef; }
+
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+  .lesson { padding: 1.35rem 1rem 3rem; }
+  h1 { font-size: 1.6rem; }
+  .course-title { font-size: 1.25rem; }
+}
+
+@media print {
+  html { font-size: 11pt; }
+  body { background: white; }
+  .lesson { max-width: none; padding: 0; }
+  a { color: inherit; text-decoration: none; }
+}

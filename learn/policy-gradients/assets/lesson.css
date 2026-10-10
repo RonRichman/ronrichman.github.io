@@ -1,0 +1,344 @@
+/* Shared lesson stylesheet — Tufte-inspired, print-friendly */
+:root {
+  --bg: #fffff8;
+  --ink: #111;
+  --muted: #5a5a5a;
+  --accent: #1a5f7a;
+  --accent-soft: #e8f2f6;
+  --correct: #1b6b3a;
+  --correct-bg: #e6f5ec;
+  --wrong: #8b1e1e;
+  --wrong-bg: #f8e8e8;
+  --rule: #ddd;
+  --card: #fff;
+  --max: 42rem;
+  --font-serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lesson {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+header.lesson-header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.lesson-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.lesson-win {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 1.5rem 0 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+p, li { margin: 0.7rem 0; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover { background: var(--accent-soft); }
+
+.mission-hook {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1rem;
+  margin: 1.25rem 0 1.5rem;
+  font-size: 0.98rem;
+}
+
+.mission-hook strong {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent);
+}
+
+.math-block {
+  display: block;
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.math-block .step {
+  display: block;
+  margin: 0.35rem 0;
+}
+
+.math-inline {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.identity-box {
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+  margin: 1.25rem 0;
+  background: #f7fbfd;
+}
+
+.identity-box .label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+ul.tight li { margin: 0.35rem 0; }
+
+.note {
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.sources {
+  font-size: 0.88rem;
+}
+
+.sources ol {
+  padding-left: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.sources li { margin: 0.3rem 0; }
+
+.follow-up {
+  margin-top: 2.25rem;
+  padding: 1rem 1.15rem;
+  background: #fafaf5;
+  border: 1px dashed var(--rule);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.ref-link {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  margin: 1.25rem 0;
+}
+
+/* Quiz widget */
+.quiz {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.quiz-q {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 1.1rem 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.quiz-q .prompt {
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+  font-size: 1.02rem;
+}
+
+.quiz-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.quiz-options button {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+  line-height: 1.35;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.quiz-options button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.quiz-options button:disabled { cursor: default; }
+
+.quiz-options button.correct {
+  background: var(--correct-bg);
+  border-color: var(--correct);
+  color: var(--correct);
+}
+
+.quiz-options button.wrong {
+  background: var(--wrong-bg);
+  border-color: var(--wrong);
+  color: var(--wrong);
+}
+
+.quiz-feedback {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  min-height: 1.3em;
+}
+
+.quiz-feedback.ok { color: var(--correct); }
+.quiz-feedback.bad { color: var(--wrong); }
+
+.quiz-progress {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+/* Reference cheat-sheet tweaks */
+body.reference .lesson { padding-top: 1.5rem; }
+body.reference h1 { font-size: 1.5rem; }
+body.reference .math-block { font-size: 1rem; }
+
+table.compact {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0.75rem 0 1rem;
+}
+
+table.compact th,
+table.compact td {
+  border: 1px solid var(--rule);
+  padding: 0.4rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.compact th {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #f3f3ee;
+  font-weight: 600;
+}
+
+@media print {
+  html { font-size: 11pt; }
+  body { background: white; }
+  .lesson { max-width: none; padding: 0; }
+  a { color: inherit; text-decoration: none; }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+    word-break: break-all;
+  }
+  .quiz-options button { border: 1px solid #999; }
+  .mission-hook, .follow-up, .identity-box { break-inside: avoid; }
+}
+
+/* Curve plot component (assets/curve-plot.js) */
+.curve-plot { margin: 1.25rem 0; padding: 0.75rem 0.9rem; border: 1px solid var(--rule); background: #fbfbf7; }
+.curve-plot svg { width: 100%; height: auto; display: block; }
+.curve-plot .axis { stroke: #888; stroke-width: 1; }
+.curve-plot .axis-label, .curve-plot .series-label, .curve-plot .marker-label { font-family: var(--font-sans); font-size: 11px; fill: #555; }
+.curve-plot .series { fill: none; stroke-width: 2; }
+.curve-plot .series.s0 { stroke: #8a1c1c; }
+.curve-plot .series.s1 { stroke: #2c5d8a; }
+.curve-plot .series.dashed { stroke-dasharray: 5 4; }
+.curve-plot .series-label.s0 { fill: #8a1c1c; }
+.curve-plot .series-label.s1 { fill: #2c5d8a; }
+.curve-plot .marker { stroke: #999; stroke-dasharray: 2 3; }
+.curve-controls { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-family: var(--font-sans); font-size: 0.85rem; margin-top: 0.5rem; }
+.curve-controls input[type=range] { vertical-align: middle; width: 9rem; }
+.curve-val { display: inline-block; min-width: 2.5rem; font-variant-numeric: tabular-nums; }
+.curve-readout { font-family: var(--font-sans); font-size: 0.85rem; margin: 0.4rem 0 0; color: #333; }
+@media print { .curve-controls { display: none; } }
+
+/* softmax-step.js: one-step softmax PG simulator */
+.softmax-step { margin: 1.25rem 0; padding: 0.75rem 0.9rem; border: 1px solid var(--rule); background: #fbfbf7; }
+.softmax-step table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.85rem; margin-top: 0.6rem; font-variant-numeric: tabular-nums; }
+.softmax-step th, .softmax-step td { text-align: right; padding: 0.2rem 0.4rem; border-bottom: 1px solid var(--rule); }
+.softmax-step th:first-child, .softmax-step td:first-child { text-align: left; }
+
+/* group-advantage.js: GRPO outcome group-relative Â calculator */
+.group-advantage { margin: 1.25rem 0; padding: 0.75rem 0.9rem; border: 1px solid var(--rule); background: #fbfbf7; }
+.group-advantage table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.85rem; margin-top: 0.6rem; font-variant-numeric: tabular-nums; }
+.group-advantage th, .group-advantage td { text-align: right; padding: 0.2rem 0.4rem; border-bottom: 1px solid var(--rule); }
+.group-advantage th:first-child, .group-advantage td:first-child,
+.group-advantage th:last-child, .group-advantage td:last-child { text-align: left; }
+.group-advantage tr.reinforce td:last-child { color: var(--correct); font-weight: 600; }
+.group-advantage tr.penalize td:last-child { color: var(--wrong); font-weight: 600; }
+.group-advantage tr.neutral td:last-child { color: var(--muted); }
